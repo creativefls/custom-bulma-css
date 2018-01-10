@@ -1,0 +1,26 @@
+{
+  "name": "fls-custom-bulma",
+  "version": "1.0.0",
+  "description": "Customized Bulma CSS Framework by FLS",
+  "main": "flsbulma.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativefls/custom-bulma-css.git"
+  },
+  "keywords": [
+    "fls",
+    "css",
+    "bulma",
+    "framework",
+    "custom"
+  ],
+  "author": "wkwksama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/creativefls/custom-bulma-css/issues"
+  },
+  "homepage": "https://github.com/creativefls/custom-bulma-css#readme"
+}
