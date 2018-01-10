@@ -1,0 +1,42 @@
+// 1. Import the initial variables
+@import "./node_modules/bulma/sass/utilities/initial-variables";
+@import "./node_modules/bulma/sass/utilities/functions";
+
+// 2. Set your own initial variables
+// Update blue
+$purple: #735f9d;
+$red: #de3339;
+$yellow: #ffcf28;
+// Add a serif family
+$family-sans: "Gandhi Sans","Ubuntu","Helvetica Neue","Helvetica","Open Sans","Arial",sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $purple;
+$primary-invert: findColorInvert($purple);
+$danger: $red;
+$danger-invert: findColorInvert($red);
+$warning: $yellow;
+$warning-invert: findColorInvert($yellow);
+// Use the new serif family
+$family-primary: $family-sans;
+
+// 4. Setup your Custom Colors
+$primary-dark: #463272;
+$primary-dark-invert: findColorInvert($primary-dark);
+$danger-dark: #cf3339;
+$danger-dark-invert: findColorInvert($danger-dark);
+$warning: #febd2b;
+$warning-invert: findColorInvert($warning);
+
+// 5. Add new color variables to the color map.
+@import "./node_modules/bulma/sass/utilities/derived-variables.sass";
+$addColors: (
+  "danger-dark":($danger-dark, $danger-dark-invert),
+  "primary-dark": ($primary-dark, $primary-dark-invert),
+  "warning": ($warning, $warning-invert)
+);
+$colors: map-merge($colors, $addColors);
+
+// 6. Import the rest of Bulma
+@import "./node_modules/bulma/bulma";
